@@ -1,0 +1,15 @@
+conda==23.3.1
+conda-package-handling==2.0.2
+crypto==1.4.1
+cryptography==2.7
+Keras==2.2.4
+Keras-Applications==1.0.8
+Keras-Preprocessing==1.1.2
+matplotlib==3.7.0
+seaborn==0.12.2
+pycrypto==2.6.1
+pycryptodome==3.17.0
+pyOpenSSL==23.0.0
+scipy==1.5.2
+tensorflow==2.5
+
