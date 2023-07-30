@@ -590,13 +590,13 @@ def train(model, BETA, SIGMA):
     overall_loss = []
     overall_loss_val = []
     best_val_loss = 100
-    var_name = 'disparity_{}_{}_{}_new_amazon'.format(BETA)
+    var_name = 'disparity_{}_new_amazon'.format(BETA)
     #var_name_user1 = 'P_per_{}_{}_new_amazon'.format(BETA, SIGMA)
     #var_name_user2 = 'Q_per_{}_{}_new_amazon'.format(BETA, SIGMA)
     #var_name_user3 = 'P_add_list_{}_{}_new_amazon'.format(BETA, SIGMA)
     #var_name_user4 = 'Q_add_list_{}_{}_new_amazon'.format(BETA, SIGMA)
-    var_name_2 = 'Validation_loss_{}_{}_{}_new_amazon'.format(BETA)
-    var_name_3 = 'Test_RMSE_{}_{}_{}_new_amazon'.format(BETA)
+    var_name_2 = 'Validation_loss_{}_new_amazon'.format(BETA)
+    var_name_3 = 'Test_RMSE_{}_new_amazon'.format(BETA)
     locals()[var_name] = []
     #locals()[var_name_user1] = []
     #locals()[var_name_user2] = []
@@ -605,7 +605,7 @@ def train(model, BETA, SIGMA):
     locals()[var_name_2] = []
     locals()[var_name_3] = []
     cnt=1
-#     seed_list = np.arange(0,EPOCH)
+
     for rounds in range(EPOCH):
         print("Epoch:", cnt)
         alluserembs=userembedding_layer.get_weights()[0]
@@ -692,7 +692,7 @@ def train(model, BETA, SIGMA):
         overall_loss_val.append(batch_loss_val)
         #if np.mean(overall_loss_val) < best_val_loss:
         #if batch_loss_val < best_val_loss:
-          # best_val_loss = np.mean(overall_loss_val)
+        # best_val_loss = np.mean(overall_loss_val)
         #   best_val_loss = batch_loss_val
         #   disp = np.abs(P_valid - Q_valid)
         #   locals()[var_name].append(disp)
@@ -720,6 +720,9 @@ def train(model, BETA, SIGMA):
            test(model,user_neighbor_emb,testu_in,testi_in,testlabel_in, usernei_test)
         
     print(locals()[var_name])
+
+    # Create a folder with the name results in the working directory to save the results
+    
     np.save('./results/{}.npy'.format(var_name), locals()[var_name])
     np.save('./results/{}.npy'.format(var_name_2), locals()[var_name_2])
     
@@ -761,7 +764,10 @@ if __name__ == "__main__":
     usernei_test = generate_history(Otest)
     print(usernei)
     print(usernei_val)
-        
+
+    #generate public&private keys     
+    generate_key()
+    
     local_ciphertext = []
     for i in tqdm(usernei):
         messages = []
@@ -791,10 +797,6 @@ if __name__ == "__main__":
     testu_a,testi_a,testlabel_a=generate_test_data(Otest,M, users_id_dict, df_user_profile,'active')
     testu_in,testi_in,testlabel_in=generate_test_data(Otest,M, users_id_dict, df_user_profile,'inactive')
     testu,testi,testlabel=generate_test_data_all(Otest,M, users_id_dict, df_user_profile)
-
-  
-    #generate public&private keys     
-    generate_key()
 
     BETAS = [0.0, 0.3, 0.5, 0.7, 0.9]
 
