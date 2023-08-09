@@ -91,8 +91,8 @@ if __name__ == '__main__':
             print('Number of items', len(item_id_list))
             print('Number of users',len(user_id_list))
 
-            print('Number of training ratings', np.sum([len(train_data[e]) for e in train_data]))
-            print('Number of testing ratings',np.sum([len(test_data[e]) for e in test_data]))
+            #print('Number of training ratings', np.sum([len(train_data[e]) for e in train_data]))
+            #print('Number of testing ratings',np.sum([len(test_data[e]) for e in test_data]))
         # Init process
             user_vector = np.zeros([len(user_id_list), hidden_dim]) + 0.01
             user_vector = user_vector.astype('float32')
