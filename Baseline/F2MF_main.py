@@ -3,11 +3,10 @@ import time
 import numpy as np
 import pickle
 import tensorflow as tf
-from phe import paillier
+
 from ML_data_processing import item_id_list, user_id_list, train_data, test_data, user_id_list_test, user_id_list_test_male, user_id_list_test_female, test_data_male, test_data_female, df_user_profile  # Uncomment this for Movie lens data processing
 #from amazon_data_processing import item_id_list, user_id_list, train_data, test_data, user_id_list_test, user_id_list_test_male, user_id_list_test_female, test_data_male, test_data_female, df_user_profile  # Uncomment this for Amazon data processing
 
-public_key, private_key = paillier.generate_paillier_keypair(n_length=256, )
 
 def user_update(single_user_vector, user_rating_list, encrypted_item_vector):
   
