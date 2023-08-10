@@ -54,7 +54,5 @@ python main_table1.py or python main_fig5.py
 ## Results
 
 Each run for different (hyperparameters) settings saves the required files at the given path. 
-Use ``` 
-F2PGNN_main/Plotter.ipynb ``` for plotting the results of the paper.
 
 The estimated running time is from 30 minutes to hours, depending on the dataset size.
