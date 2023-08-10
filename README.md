@@ -45,7 +45,7 @@ python F2MF_main.py
 To run the code of the paper, run the following commands:
 ```bash
 cd F2PGNN_main
-python main_table1.py or python main_fig6.py
+python main_table1.py or python main_fig5.py
 ```
 
 
