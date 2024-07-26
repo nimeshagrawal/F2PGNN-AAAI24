@@ -1,6 +1,6 @@
 
 # No prejudice! Fair Federated Graph Neural Networks for Personalized Recommendation
-[Paper](https://ojs.aaai.org/index.php/AAAI/article/view/28950)
+[Paper](https://ojs.aaai.org/index.php/AAAI/article/view/28950) | [Demo](https://ojs.aaai.org/index.php/AAAI/article/view/28950)
 
 This repository is the implementation of F2PGNN: Fair Federated Graph Neural Networks for Personalized Recommendation.
 
