@@ -1,6 +1,7 @@
 
 # No prejudice! Fair Federated Graph Neural Networks for Personalized Recommendation
-![Static Badge](https://img.shields.io/badge/paper-blue?link=https%3A%2F%2Fgithub.com%2Fnimeshagrawal%2FF2PGNN-AAAI24)
+<img alt="Static Badge" src="https://img.shields.io/badge/demo-blue?link=https%3A%2F%2Fojs.aaai.org%2Findex.php%2FAAAI%2Farticle%2Fview%2F28950">
+
 
 
 This repository is the implementation of F2PGNN: Fair Federated Graph Neural Networks for Personalized Recommendation.
