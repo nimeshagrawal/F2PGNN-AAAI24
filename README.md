@@ -6,7 +6,7 @@ This repository is the implementation of F2PGNN: Fair Federated Graph Neural Net
 
 &#10064; *This paper addresses the pervasive issue of inherent bias within Recommendation Systems (RSs) for different demographic groups without compromising the privacy of sensitive user attributes in Federated Learning (FL) environment with the graph-based model.* 
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/nimeshagrawal/F2PGNN-AAAI24/blob/master/f2pgnn_main.png)
 
 
 
